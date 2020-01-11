@@ -1,11 +1,13 @@
-<div class="landing-page sidebar-collapse">
-  
-    <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/landing-bg.jpg')">
+<div id="headerbar" class="landing-page sidebar-collapse">
+    <app-navbar></app-navbar>
+    <div class="page-header header-filter" data-parallax="true"
+        style="background-image: url('assets/img/landing-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <h2 class="title">Overwhelmed? We can help </h2>
-                    <h4>OGItask offers a simpler way to stay organized. If you have a crazy job or an ambitious project, we will be your trusty sidekick.</h4>
+                    <h4>OGItask offers a simpler way to stay organized. If you have a crazy job or an ambitious project,
+                        we will be your trusty sidekick.</h4>
                     <br>
                 </div>
                 <div class="col-md-6">
@@ -13,7 +15,7 @@
                         <div class="container">
                             <div style="padding:20px">
                                 <div class="row">
-                                    <div class="col-md-12 ml-auto mr-auto">
+                                    <div class="col-md-12 ml-auto mr-auto" style="color: #000;">
                                         <form class="contact-form">
                                             <div class="form-group">
                                                 <label class="bmd-label-floating">Email</label>
@@ -24,7 +26,18 @@
                                                     SignUp
                                                 </button>
                                             </div><br />
-                                            <div style="color: #000;text-align: center;">
+                                            <div>
+                                                <p style="text-align: center;">We sent a one-time verification code to
+                                                    your email. Please type or
+                                                    paste
+                                                    the code below. </p>
+                                                <div class="form-group"
+                                                    style="width: 30%; margin: 0 auto; margin-bottom: 10px;">
+                                                    <label class="bmd-label-floating">Code</label>
+                                                    <input type="email" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div style="text-align: center;">
                                                 Already have an account?
                                                 <button class="btn btn-primary btn-raised" routerLink="/login">
                                                     Login
@@ -46,7 +59,9 @@
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto">
                         <h2 class="title">Let&apos;s talk product</h2>
-                        <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn&apos;t scroll to get here.
+                        <h5 class="description">This is the paragraph where you can write more details about your
+                            product. Keep you user engaged by providing meaningful information. Remember that by this
+                            time, the user is curious, otherwise he wouldn&apos;t scroll to get here.
                             Add a button if you want the user to see more.</h5>
                     </div>
                 </div>
@@ -58,7 +73,8 @@
                                     <i class="material-icons">chat</i>
                                 </div>
                                 <h4 class="info-title">Task Management</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                <p>Divide details about your product or agency work into parts. Write a few lines about
+                                    each one. A paragraph describing a feature will be enough.</p>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -67,7 +83,8 @@
                                     <i class="material-icons">verified_user</i>
                                 </div>
                                 <h4 class="info-title">Save on Dropbox </h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                <p>Divide details about your product or agency work into parts. Write a few lines about
+                                    each one. A paragraph describing a feature will be enough.</p>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -76,7 +93,8 @@
                                     <i class="material-icons">fingerprint</i>
                                 </div>
                                 <h4 class="info-title">Export / Import </h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                <p>Divide details about your product or agency work into parts. Write a few lines about
+                                    each one. A paragraph describing a feature will be enough.</p>
                             </div>
                         </div>
                     </div>
@@ -84,35 +102,5 @@
             </div>
         </div>
     </div>
-    <footer class="footer footer-default">
-        <div class="container">
-            <nav class="float-left">
-                <ul>
-                    <li>
-                        <a href="https://www.creative-tim.com">
-                            OGITASK
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://creative-tim.com/presentation">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://blog.creative-tim.com">
-                            Blog
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.creative-tim.com/license">
-                            Help
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="copyright float-right">
-                © 2020 All right Reversed.
-            </div>
-        </div>
-    </footer>
+    <app-footer></app-footer>
 </div>

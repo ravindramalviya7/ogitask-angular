@@ -6,7 +6,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login.component';
 import { SignUpComponent } from './signup.component';
-
+import { SharedModule } from '../common/common.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { SignUpComponent } from './signup.component';
   imports: [
     FormsModule,
     AuthRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: []

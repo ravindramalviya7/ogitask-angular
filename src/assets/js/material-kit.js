@@ -18,7 +18,7 @@ $(document).ready(function() {
   BrowserDetect.init();
 
   // Init Material scripts for buttons ripples, inputs animations etc, more info on the next link https://github.com/FezVrasta/bootstrap-material-design#materialjs
-  $('body').bootstrapMaterialDesign();
+  $('#headerbar').bootstrapMaterialDesign();
 
   window_width = $(window).width();
 
@@ -56,7 +56,7 @@ $(document).on('click', '.navbar-toggler', function() {
   if (materialKit.misc.navbar_menu_visible == 1) {
     $('html').removeClass('nav-open');
     materialKit.misc.navbar_menu_visible = 0;
-    $('#bodyClick').remove();
+    $('#headerbarClick').remove();
     setTimeout(function() {
       $toggle.removeClass('toggled');
     }, 550);
@@ -68,15 +68,15 @@ $(document).on('click', '.navbar-toggler', function() {
     }, 580);
 
 
-    div = '<div id="bodyClick"></div>';
-    $(div).appendTo("body").click(function() {
+    div = '<div id="headerbarClick"></div>';
+    $(div).appendTo("headerbar").click(function() {
       $('html').removeClass('nav-open');
 
       if ($('nav').hasClass('navbar-absolute')) {
         $('html').removeClass('nav-open-absolute');
       }
       materialKit.misc.navbar_menu_visible = 0;
-      $('#bodyClick').remove();
+      $('#headerbarClick').remove();
       setTimeout(function() {
         $toggle.removeClass('toggled');
       }, 550);

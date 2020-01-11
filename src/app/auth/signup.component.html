@@ -1,154 +1,47 @@
-<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
-    id="sectionsNav">
-    <div class="container">
-        <div class="navbar-translate">
-            <a class="navbar-brand" routerLink="/home">
-                Material Kit  </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
-                        href="https://www.facebook.com/CreativeTim" target="_blank"
-                        data-original-title="Like us on Facebook">
-                        <i class="fa fa-user"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/landing-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2 class="title">Overwhelmed? We can help </h2>
-                <h4>OGItask offers a simpler way to stay organized. If you have a crazy job or an ambitious project, we
-                    will be your trusty sidekick.</h4>
-                <br>
-            </div>
-            <div class="col-md-6">
-                <div class="main">
-                    <div class="container">
-                        <div style="padding:20px">
-                            <div class="row">
-                                <div class="col-md-12 ml-auto mr-auto">
-                                    <form class="contact-form">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating">Email</label>
-                                            <input type="email" class="form-control">
-                                        </div>
-                                        <div class="ml-auto mr-auto text-center">
-                                            <button class="btn btn-primary btn-raised">
-                                                SignUp
-                                            </button>
-                                        </div><br />
-                                        <div style="color: #000;text-align: center;">
-                                            Already have an account?
-                                            <button class="btn btn-primary btn-raised">
-                                                Login
-                                            </button>
-                                        </div>
-                                    </form>
+<div class="login-page sidebar-collapse">
+    <app-navbar></app-navbar>
+    <div class="page-header header-filter"
+        style="background-image: url('../assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                    <div class="card card-login">
+                        <form class="form" method="" action="">
+                            <div class="card-header card-header-primary text-center">
+                                <h4 class="card-title">Register</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">mail</i>
+                                        </span>
+                                    </div>
+                                    <input type="email" class="form-control" placeholder="Email...">
+                                </div>
+                                <br />
+                                <div>
+                                    <p style="text-align: center;">We sent a one-time verification code to
+                                        your email. Please type or
+                                        paste
+                                        the code below. </p>
+                                    <div class="input-group" style="width: 30%; margin: 0 auto;">
+                                        <input type="password" class="form-control" placeholder="Code...">
+                                    </div>
+                                </div>
+                                <div class="text-center" style="color: #000;">
+                                    <a href="#/dashboard" class="btn btn-primary btn-link btn-wd btn-lg">Signup</a>
                                 </div>
                             </div>
-                        </div>
+                            <div class="footer text-center" style="color: #000;">
+                                Don't have account?<a href="#/login"
+                                    class="btn btn-primary btn-link btn-wd btn-lg">Login</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <app-footer></app-footer>
 </div>
-<div class="main main-raised">
-    <div class="container">
-        <div class="section text-center">
-            <div class="row">
-                <div class="col-md-8 ml-auto mr-auto">
-                    <h2 class="title">Let&apos;s talk product</h2>
-                    <h5 class="description">This is the paragraph where you can write more details about your
-                        product.
-                        Keep you user engaged by providing meaningful information. Remember that by this time, the
-                        user
-                        is curious, otherwise he wouldn&apos;t scroll to get here. Add a button if you want the user
-                        to
-                        see more.</h5>
-                </div>
-            </div>
-            <div class="features">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="info">
-                            <div class="icon icon-info">
-                                <i class="material-icons">chat</i>
-                            </div>
-                            <h4 class="info-title">Task Management</h4>
-                            <p>Divide details about your product or agency work into parts. Write a few lines about
-                                each
-                                one. A paragraph describing a feature will be enough.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info">
-                            <div class="icon icon-success">
-                                <i class="material-icons">verified_user</i>
-                            </div>
-                            <h4 class="info-title">Save on Dropbox </h4>
-                            <p>Divide details about your product or agency work into parts. Write a few lines about
-                                each
-                                one. A paragraph describing a feature will be enough.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info">
-                            <div class="icon icon-danger">
-                                <i class="material-icons">fingerprint</i>
-                            </div>
-                            <h4 class="info-title">Export / Import </h4>
-                            <p>Divide details about your product or agency work into parts. Write a few lines about
-                                each
-                                one. A paragraph describing a feature will be enough.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<footer class="footer footer-default">
-    <div class="container">
-        <nav class="float-left">
-            <ul>
-                <li>
-                    <a href="https://www.creative-tim.com">
-                        OGITASK
-                    </a>
-                </li>
-                <li>
-                    <a href="https://creative-tim.com/presentation">
-                        About Us
-                    </a>
-                </li>
-                <li>
-                    <a href="http://blog.creative-tim.com">
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.creative-tim.com/license">
-                        Help
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="copyright float-right">
-            © 2020 All right Reversed.
-        </div>
-    </div>
-</footer>
