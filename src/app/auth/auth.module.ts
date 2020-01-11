@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AuthComponent } from './auth.component';
@@ -5,6 +6,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login.component';
 import { SignUpComponent } from './signup.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,7 @@ import { SignUpComponent } from './signup.component';
   ],
   imports: [
     FormsModule,
-    AuthRoutingModule
+    AuthRoutingModule,
   ],
   providers: [],
   bootstrap: []
