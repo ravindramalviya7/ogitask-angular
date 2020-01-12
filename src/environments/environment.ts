@@ -12,9 +12,9 @@
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 const URL = {
   APPLICATION_PROTOCOL: 'http://',
-  APPLICATION_SERVER_DOMAIN_NAME: '149.129.178.50',
+  APPLICATION_SERVER_DOMAIN_NAME: 'localhost',
   APPLICATION_SERVER_PORT: ':8081',
-  APPLICATION_NAME: '/ogitaks',
+  APPLICATION_NAME: '/ogitasks',
 };
 export const environment = {
   production: false,

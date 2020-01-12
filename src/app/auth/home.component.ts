@@ -8,14 +8,14 @@ import { UserService } from '../services/user.service';
 import { AppConstants } from '../constants/app.constants';
 
 @Component({
-  selector: 'home-root',
+  selector: 'app-home-root',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  providers: [UserService]
+
 })
 export class HomeComponent {
   title = 'ogitasks';
-  isSendCode: boolean = false;
+  isSendCode = false;
   signForm = this.fb.group({
     code: this.fb.control('', []),
     email: this.fb.control('', [Validators.required, Validators.email]),
@@ -23,9 +23,9 @@ export class HomeComponent {
 
 
   constructor(private route: ActivatedRoute,
-    private router: Router,
-    private fb: FormBuilder,
-    private userService: UserService) {
+              private router: Router,
+              private fb: FormBuilder,
+              private userService: UserService) {
   }
 
   validateAllFormFields(formGroup: FormGroup) {
@@ -40,7 +40,7 @@ export class HomeComponent {
   }
 
   onEmailChange() {
-    console.log("change text");
+    console.log('change text');
     this.isSendCode = false;
   }
 
@@ -50,23 +50,23 @@ export class HomeComponent {
       if (this.isSendCode) {
         if (this.signForm.value.code.length > 0) {
           const object = {
-            username: this.signForm.value.username,
+            username: this.signForm.value.email,
             password: this.signForm.value.code,
             grantType: AppConstants.PASSWORD,
           };
           this.userService.login(object).subscribe(
             (data: any) => {
-              localStorage.setItem('role', data.role[0]);
+              // localStorage.setItem('role', data.role[0]);
               localStorage.setItem('token', JSON.stringify(data));
               this.router.navigate(['/dashboard']);
             },
             error => {
-
+              alert(error.error.error_description);
             },
           );
         }
       } else {
-        this.userService.sendCode({ 'map': { email: this.signForm.value.email, 'allowSignUp': 'true' } }).subscribe(
+        this.userService.sendCode({ map: { email: this.signForm.value.email, allowSignUp: 'true' } }).subscribe(
           (data: any) => {
             this.isSendCode = true;
           },

@@ -1,25 +1,27 @@
 <div class="login-page sidebar-collapse">
-    <app-navbar></app-navbar>
-    <div class="page-header header-filter"
-        style="background-image: url('../assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-                    <div class="card card-login">
-                        <form class="form" method="" action="">
-                            <div class="card-header card-header-primary text-center">
-                                <h4 class="card-title">Login</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="material-icons">mail</i>
-                                        </span>
-                                    </div>
-                                    <input type="email" class="form-control" placeholder="Email...">
-                                </div>
-                                <!-- <div class="input-group">
+  <app-navbar></app-navbar>
+  <div class="page-header header-filter"
+    style="background-image: url('../assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+          <div class="card card-login">
+            <form class="form" [formGroup]='signForm' (ngSubmit)="onSubmit()">
+              <div class="card-header card-header-primary text-center">
+                <h4 class="card-title">Login</h4>
+              </div>
+              <div class="card-body">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">mail</i>
+                    </span>
+                  </div>
+                  <input type="email" class="form-control" placeholder="Email..." required formControlName="email"
+                    status="(signForm.get('email').touched && signForm.get('email').errors)?'danger':''"
+                    (ngModelChange)="onEmailChange()" (ngSubmit)="onSubmit()">
+                </div>
+                <!-- <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="material-icons">lock_outline</i>
@@ -27,7 +29,7 @@
                                     </div>
                                     <input type="password" class="form-control" placeholder="Password...">
                                 </div> -->
-                                <!-- <div class="input-group">
+                <!-- <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="material-icons">lock_outline</i>
@@ -35,29 +37,28 @@
                                     </div>
                                     <input type="password" class="form-control" placeholder="Code...">
                                 </div> -->
-                                <br />
-                                <div>
-                                    <p style="text-align: center;">We sent a one-time verification code to
-                                        your email. Please type or
-                                        paste
-                                        the code below. </p>
-                                    <div class="input-group" style="width: 30%; margin: 0 auto;">
-                                        <input type="password" class="form-control" placeholder="Code...">
-                                    </div>
-                                </div>
-                                <div class="text-center" style="color: #000;">
-                                    <a href="#/dashboard" class="btn btn-primary btn-link btn-wd btn-lg">Login</a>
-                                </div>
-                            </div>
-                            <div class="footer text-center" style="color: #000;">
-                                Don't have account?<a href="#/signup"
-                                    class="btn btn-primary btn-link btn-wd btn-lg">Signup</a>
-                            </div>
-                        </form>
-                    </div>
+                <br />
+                <div *ngIf="isSendCode">
+                  <p style="text-align: center;">We sent a one-time verification code to
+                    your email. Please type or
+                    paste
+                    the code below. </p>
+                  <div class="input-group" style="width: 30%; margin: 0 auto;">
+                    <input type="password" class="form-control" formControlName="code" placeholder="Code...">
+                  </div>
                 </div>
-            </div>
+                <div class="text-center" style="color: #000;">
+                  <input type="submit" value="Login" class="btn btn-primary btn-link btn-wd btn-lg">
+                </div>
+                <div class="text-center" style="color: #000;">
+                  Don't have account?<a routerLink="/signup" class="btn btn-primary btn-link btn-wd btn-lg">Signup</a>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-    <app-footer></app-footer>
+  </div>
+  <app-footer></app-footer>
 </div>

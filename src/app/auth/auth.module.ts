@@ -8,6 +8,7 @@ import { LoginComponent } from './login.component';
 import { SignUpComponent } from './signup.component';
 import { SharedModule } from '../common/common.module';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../services/user.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     CommonModule,
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: []
 })
 export class AuthModule { }

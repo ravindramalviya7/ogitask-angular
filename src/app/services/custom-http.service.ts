@@ -8,13 +8,13 @@ import { AppConstants } from '../constants/app.constants';
 
 @Injectable()
 export class CustomHttpService {
+  constructor(private http: HttpClient, private router: Router) {
+    this.token = JSON.parse(localStorage.getItem(AppConstants.TOKEN));
+  }
+  private token: Token;
   postLogins(endPoint: string, object: any) {
     const url = environment.API_BASE_URL + endPoint;
     return this.http.post(url, object, this.getOptions());
-  }
-  private token: Token;
-  constructor(private http: HttpClient, private router: Router) {
-    this.token = JSON.parse(localStorage.getItem(AppConstants.TOKEN));
   }
 
   get(endPoint: string) {
@@ -70,7 +70,7 @@ export class CustomHttpService {
     return {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + accessToken,
+        Authorization: 'Bearer ' + accessToken,
       }),
     };
   }
@@ -79,7 +79,7 @@ export class CustomHttpService {
     return {
       headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
-        'authorization': 'Basic ZGV2Z2xhbi1jbGllbnQ6ZHVy',
+        Authorization: 'Basic ZGV2Z2xhbi1jbGllbnQ6ZHVy',
       }),
     };
   }
@@ -88,7 +88,7 @@ export class CustomHttpService {
   getOptionsWithoutToken() {
     return {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'
+        'content-type': 'application/json',
       }),
     };
   }
@@ -99,14 +99,13 @@ export class CustomHttpService {
         username: obj.username,
         password: obj.password,
         grant_type: obj.grantType,
-        type: 'DEVICE',
       },
     });
   }
   getOptionsFormMultipart() {
     return {
       headers: new HttpHeaders({
-        'Authorization': 'Bearer ' + this.token.access_token,
+        Authorization: 'Bearer ' + this.token.access_token,
       }),
     };
   }
