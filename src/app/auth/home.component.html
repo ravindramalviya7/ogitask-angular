@@ -16,25 +16,29 @@
                             <div style="padding:20px">
                                 <div class="row">
                                     <div class="col-md-12 ml-auto mr-auto" style="color: #000;">
-                                        <form class="contact-form">
+                                        <form class="contact-form" [formGroup]='signForm'>
                                             <div class="form-group">
                                                 <label class="bmd-label-floating">Email</label>
-                                                <input type="email" class="form-control">
+                                                <input type="email" class="form-control" formControlName="email"
+                                                    required
+                                                    status="(signForm.get('email').touched && signForm.get('email').errors)?'danger':''"
+                                                    (ngModelChange)="onEmailChange()">
                                             </div>
                                             <div class="ml-auto mr-auto text-center">
-                                                <button class="btn btn-primary btn-raised" routerLink="/signup">
+                                                <button class="btn btn-primary btn-raised" (click)="onSubmit()">
                                                     SignUp
                                                 </button>
                                             </div><br />
-                                            <div>
-                                                <p style="text-align: center;">We sent a one-time verification code to
+                                            <div *ngIf="isSendCode">
+                                                <p style="text-align: center;">We sent a one-time verification code
+                                                    to
                                                     your email. Please type or
                                                     paste
                                                     the code below. </p>
                                                 <div class="form-group"
                                                     style="width: 30%; margin: 0 auto; margin-bottom: 10px;">
                                                     <label class="bmd-label-floating">Code</label>
-                                                    <input type="email" class="form-control">
+                                                    <input type="text" class="form-control"  formControlName="code">
                                                 </div>
                                             </div>
                                             <div style="text-align: center;">
