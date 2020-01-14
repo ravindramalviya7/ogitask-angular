@@ -1,61 +1,86 @@
-<div class="wrapper">
-  <!-- Sidebar -->
-  <nav id="sidebar">
-    <div class="sidebar-header">
-      <span style="font-size: 30px;padding: ;">OGI Tasks</span>
-    </div>
-
-    <ul class="list-unstyled components">
-      <!-- <p>Dummy Heading</p>
-      <li class="active">
-        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-        <ul class="collapse list-unstyled" id="homeSubmenu">
-          <li>
-            <a href="#">Home 1</a>
-          </li>
-          <li>
-            <a href="#">Home 2</a>
-          </li>
-          <li>
-            <a href="#">Home 3</a>
-          </li>
+<!-- <div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header" style="text-align: center;">
+            <span style="font-size: 30px;">
+                <img src="assets/img/logo.png" width="60%" style="cursor: pointer;" />
+            </span>
+        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a>Bookmarked</a>
+            </li>
+            <li>
+                <a>Home</a>
+            </li>
         </ul>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-        <ul class="collapse list-unstyled" id="pageSubmenu">
-          <li>
-            <a href="#">Page 1</a>
-          </li>
-          <li>
-            <a href="#">Page 2</a>
-          </li>
-          <li>
-            <a href="#">Page 3</a>
-          </li>
-        </ul>
-      </li> -->
-      <li>
-        <a>Bookmarked</a>
-      </li>
-      <li>
-        <a>Home</a>
-      </li>
-    </ul>
-
-  </nav>
-  <!-- Page Content -->
-  <div id="content">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <span id="sidebarCollapse" class="btn btn-info">
-          <i class="fa fa-arrow-left"></i>
-        </span>
-      </div>
     </nav>
-  </div>
+    <div id="content">
+         <nav class="navbar navbar-expand-lg navbar-light  ">
+            <div class="container-fluid">
+                <span id="sidebarCollapse" class="btn btn-info btn-sm navbar-btn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </span>
+            </div>
+        </nav> -->
+<!---  <nav class="navbar navbar-light   justify-content-between">
+            <a class="navbar-brand">
+                <span id="sidebarCollapse" class="btn btn-info btn-sm navbar-btn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </span>
+            </a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <i class="fa fa-cog setting" aria-hidden="true" ></i>
+            </form>
+        </nav>
+    </div>
+</div> -->
+
+
+
+
+<div class="d-flex" id="wrapper">
+    <div class="  border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading" style="text-align: center;padding: 20px; background: #f5f5f5;">
+            <span style="font-size: 30px;">
+                <img src="assets/img/logo.png" width="60%" style="cursor: pointer;" />
+            </span>
+        </div>
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action  ">Bookmarke</a>
+            <a href="#" class="list-group-item list-group-item-action  ">Home</a>
+        </div>
+    </div>
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light   border-bottom">
+            <div class="row" style="width: 100%;">
+                <div class="col col-lg-4 col-md-2 col-sm-2">
+                    <span id="sidebarCollapse" id="menu-toggle" style="margin-left: 10px;"
+                        class="btn btn-primary btn-sm navbar-btn">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col col-lg-4">
+                </div>
+                <div class="col col-lg-4 col-md-10 col-sm-10">
+                    <form class="form-inline">
+                        <input class="form-control" style="width: 80%;" type="search" placeholder="Search"
+                            aria-label="Search">&nbsp;&nbsp;&nbsp;
+                        <i class="fa fa-cog setting" aria-hidden="true"></i>
+                    </form>
+
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="container-fluid">
+            <h1 class="mt-4">Simple Sidebar</h1>
+            <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
+                larger screens. When toggled using the button below, the menu will change.</p>
+            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is
+                optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which
+                will toggle the menu when clicked.</p>
+        </div>
+    </div>
 </div>
